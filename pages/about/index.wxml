@@ -1,0 +1,6 @@
+<cu-custom bgColor="bg-gradual-pink">
+	<view slot="content">东篱里</view>
+</cu-custom>
+<view>
+  花店门牌 联系地址 联系电话
+</view>

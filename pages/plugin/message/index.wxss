@@ -1,0 +1,46 @@
+.i-message {
+  position: fixed;
+  top: 600rpx;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 400rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  z-index: -1;
+  opacity: 0;
+  border-radius: 10px;
+  -webkit-transform: translateZ(0) translateY(-100%);
+  transition: all 0.4s ease-in-out;
+}
+
+.i-message-show {
+  -webkit-transform: translateZ(0) translateY(0);
+  opacity: 1;
+  z-index: 1010;
+}
+
+.i-message-default {
+    z-index: -1;
+}
+
+.i-message-success {
+  /* background: #19be6b; */
+  background-color: #013A4B;
+  color: #FFFFFF;
+}
+
+.i-message-warning {
+  background-color: #013A4B;
+  color: #FFFFFF;
+}
+
+.i-message-error {
+  /* background-image: var(--gradualOrange);
+  color: #fff; */
+  background-color: #013A4B;
+  color: #FFFFFF;
+}

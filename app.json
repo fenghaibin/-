@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/manage/index",
+    "pages/fenlei/list",
+    "pages/fenlei/add",
+    "pages/flower/list",
+    "pages/flower/add",
+    "pages/about/index",
+    "pages/details/index",
+    "pages/category/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "tabBar": {
+    "color": "#191818",
+    "selectedColor": "#F8062B",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "/images/tabbar/home.png",
+        "selectedIconPath": "/images/tabbar/home_cur.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "花束",
+        "iconPath": "/images/tabbar/category.png",
+        "selectedIconPath": "/images/tabbar/category_cur.png"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "text": "店铺",
+        "iconPath": "/images/tabbar/about.png",
+        "selectedIconPath": "/images/tabbar/about_cur.png"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

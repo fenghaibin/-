@@ -1,0 +1,29 @@
+<!-- <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">东篱里</view>
+</cu-custom> -->
+<cu-custom bgColor="bg-gradual-pink" isCustom="{{true}}"><view slot="content">操作条</view></cu-custom>
+
+<view class="page">
+  <swiper class="swiper" indicator-dots="true" circular="true" autoplay="true" interval="3000" duration="500">
+    <swiper-item wx:for="{{imgs}}" wx:key>
+      <view>
+        <image style="width:100%;height: 800rpx;" src="{{item}}" mode="scaleToFill"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="row">
+    <view class="desc_text">{{name}}</view>
+    <view style="display: flex;justify-content: space-between;width: 160rpx;">
+      <view style="text-align: center;" bindtap="liveFlower">
+        <image style="width:55rpx;height:55rpx;" src="/images/icon/live.png" mode="scaleToFill"></image>
+        <view style="font-size:20rpx;">推荐好物</view>
+      </view>
+      <view style="text-align: center;">
+        <image style="width:55rpx;height:55rpx;" src="/images/icon/share.png" mode="scaleToFill"></image>
+        <view style="font-size:20rpx;">分享</view>
+      </view>
+    </view>
+  </view>
+</view>
+<i-message id="message" />

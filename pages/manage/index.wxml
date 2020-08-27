@@ -1,0 +1,17 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{false}}">
+	<view slot="content">系统维护</view>
+</cu-custom>
+<view class="cu-list menu margin-top">
+	<view class="cu-item arrow">
+		<view class="content" bindtap="openFenlei">
+			<text class="cuIcon-circlefill text-grey"></text>
+			<text class="text-grey">分类</text>
+		</view>
+	</view>
+	<view class="cu-item arrow">
+		<view class="content" bindtap="openFlower">
+			<text class="cuIcon-circlefill text-grey"></text>
+			<text class="text-grey">花束管理</text>
+		</view>
+	</view>
+</view>

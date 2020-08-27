@@ -1,0 +1,3 @@
+<view>
+	<button bindtap="openadd">新增分类</button>
+</view>

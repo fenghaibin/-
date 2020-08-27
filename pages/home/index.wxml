@@ -1,0 +1,30 @@
+<cu-custom bgColor="bg-gradual-pink">
+	<view slot="content">东篱里</view>
+</cu-custom>
+<swiper class="swiper" indicator-dots="true" circular="true" autoplay="true" interval="3000" duration="500">
+	<swiper-item wx:for="{{swiperList}}" wx:key>
+		<view>
+			<image style="width:100%;height: 600rpx;" src="{{item}}" mode="scaleToFill"></image>
+		</view>
+	</swiper-item>
+</swiper>
+<view class='cu-bar'>
+	<view class='action'>
+		<text class='icon-title text-red'></text>近日上新</view>
+</view>
+<view class="list">
+	<block wx:for="{{datas}}" wx:key>
+		<view class="list-item" bindtap="opendetails" data-id="{{item._id}}">
+			<image style="width: 360rpx;height: 400rpx;" src="{{item.imgs[0]}}" mode="scaleToFill"></image>
+			<view class="desc_text">{{item.name}}</view>
+			<view style="display: flex;justify-content: space-between;padding-left:10rpx;padding-right:10rpx;text-align: left;">
+				<view>
+					<view style="font-size:22rpx;">{{item.live}}个点赞</view>
+					<view style="font-size:32rpx;color:red;font-weight: bold;"><text style="font-size:20rpx;">￥</text>{{item.price}}</view>
+				</view>
+				<image style="width:60rpx;height: 60rpx;" src="/images/icon/buy.png" mode="scaleToFill"></image>
+			</view>
+		</view>
+	</block>
+</view>
+<i-message id="message" />

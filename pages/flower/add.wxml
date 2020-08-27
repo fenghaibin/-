@@ -1,0 +1,53 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">编辑花束</view>
+</cu-custom>
+<view>
+	<form catchsubmit="confirm">
+		<!-- <view class="cu-form-group margin-top">
+			<view class="title">花束分类</view>
+			<picker bindchange="PickerChange" value="{{index}}" range="{{ftypes}}" range-key="name">
+				<view class="picker">
+					{{index?ftypes[index].name:'请选择'}}
+				</view>
+			</picker>
+		</view> -->
+		<view class="cu-form-group align-start">
+			<view class="title">花束描述</view>
+			<textarea name="name" maxlength="-1" placeholder="请输入花束描述"></textarea>
+		</view>
+		<view class="cu-form-group align-start">
+			<view class="title">花语</view>
+			<textarea name="flowermoral" maxlength="-1" placeholder="请输入花语"></textarea>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">价格</view>
+			<input name="price" placeholder="请输入花束价格"></input>
+		</view>
+		<view class="cu-bar bg-white">
+			<view class="action">
+				花束图片
+			</view>
+			<view class="action">
+				{{imgList.length}}/4
+			</view>
+		</view>
+		<view class="cu-form-group">
+			<view class="grid col-4 grid-square flex-sub">
+				<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+					<image src='{{imgList[index]}}' mode='aspectFill'></image>
+					<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+						<text class="cuIcon-close"></text>
+					</view>
+				</view>
+				<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+					<text class="cuIcon-cameraadd"></text>
+				</view>
+			</view>
+		</view>
+		<view class='input-confirm'>
+			<button class='base-btn btn-radius bg-gradual-blue' formType="submit">保存</button>
+		</view>
+	</form>
+</view>
+<i-message id="message" />

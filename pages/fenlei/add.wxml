@@ -1,0 +1,16 @@
+<view>
+	<form catchsubmit="confirm">
+		<view class="cu-form-group margin-top">
+			<view class="title">分类名称</view>
+			<input name="name" placeholder="请输入分类名称"></input>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">排序</view>
+			<input name="number" value="1" placeholder="请输入排序" type="number"></input>
+		</view>
+		<view class='input-confirm'>
+			<button class='base-btn btn-radius bg-gradual-blue' formType="submit">保存</button>
+		</view>
+	</form>
+</view>
+<i-message id="message" />

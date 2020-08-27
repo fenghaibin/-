@@ -1,0 +1,24 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{false}}">
+	<view slot="content">东篱里</view>
+</cu-custom>
+<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px">
+	<view class="search-form round">
+		<!-- <text class="icon-search"></text> -->
+		<input type="text" placeholder="搜索玫瑰/康乃馨/开业花篮" style="padding-left:25rpx;" confirm-type="search" bindinput="searchIcon"></input>
+	</view>
+</view>
+<view class="list">
+	<block wx:for="{{datas}}" wx:key>
+		<view class="list-item" bindtap="opendetails" data-id="{{item._id}}">
+			<image style="width: 360rpx;height: 400rpx;" src="{{item.imgs[0]}}" mode="scaleToFill"></image>
+			<view class="desc_text">{{item.name}}</view>
+			<view style="display: flex;justify-content: space-between;padding-left:10rpx;padding-right:10rpx;text-align: left;">
+				<view>
+					<view style="font-size:22rpx;">{{item.live}}个点赞</view>
+					<view style="font-size:32rpx;color:red;font-weight: bold;"><text style="font-size:20rpx;">￥</text>{{item.price}}</view>
+				</view>
+				<image style="width:60rpx;height: 60rpx;" src="/images/icon/buy.png" mode="scaleToFill"></image>
+			</view>
+		</view>
+	</block>
+</view>
